@@ -810,12 +810,9 @@ class I3CodeEnvironment(SingleTurnEnvironment):
                         f"[{sample.metadata.get('subset_idx')}] Error in {handle.id}: "
                         f"{error_msg}"
                     )
-                    # Remove sandbox — unexpected errors likely mean it is
-                    # broken (HTTP 500, dead container, etc.).  Releasing it
-                    # back would cause every subsequent rollout to hit the
-                    # same dead sandbox in a tight loop.
+                    # Release sandbox on non-infrastructure errors
                     try:
-                        await self.sandbox_pool.remove(handle)
+                        await self.sandbox_pool.release(handle)
                     except Exception:
                         pass
                     I3CodeEnvironment._reward_count += 1
