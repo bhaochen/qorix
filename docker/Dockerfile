@@ -14,7 +14,7 @@
 #   uv add math-verify
 #   uv add megatron-core megatron-bridge
 
-ARG BASE_IMAGE=ghcr.io/eduardoslonski/qorix-base:latest
+ARG BASE_IMAGE=ghcr.io/eduardoslonski/telescope-base:latest
 FROM ${BASE_IMAGE}
 
 # ── Copy project files ──────────────────────────────────────────────────────
