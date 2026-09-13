@@ -1,4 +1,4 @@
-# Telescope default configuration
+# Qorix default configuration
 # All fields with their defaults — serves as documentation.
 # Override per-experiment in a run.yaml passed via --config.
 # Override on CLI: --learning_rate 5e-7  or  --learning-rate 5e-7
@@ -20,8 +20,8 @@ environments:
 
 checkpoint_every: false
 
-wandb_project: "telescope"
-wandb_run_name: "telescope_run"
+wandb_project: "qorix"
+wandb_run_name: "qorix_run"
 
 # ── Workers ──────────────────────────────────────────────────────────────────
 inference_num_workers: 2

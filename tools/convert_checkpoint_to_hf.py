@@ -27,14 +27,14 @@ import re
 import sys
 from pathlib import Path
 
-from telescope.utils.checkpoint_converter import convert_single
+from qorix.utils.checkpoint_converter import convert_single
 
 _STEP_RE = re.compile(r"^step_(\d+)$")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Convert telescope training checkpoints to HuggingFace format",
+        description="Convert qorix training checkpoints to HuggingFace format",
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(

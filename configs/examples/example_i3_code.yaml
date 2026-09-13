@@ -14,7 +14,7 @@
 #
 # Usage: uv run train.py --config configs/examples/example_i3_code.yaml
 
-wandb_project: "telescope"
+wandb_project: "qorix"
 wandb_run_name: "i3_code"
 
 model: "Qwen/Qwen3-4B"

@@ -33,9 +33,9 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/telescope:latest
+          tags: ghcr.io/${{ github.repository_owner }}/qorix:latest
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/telescope-base:latest
+            BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/qorix-base:latest

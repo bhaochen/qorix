@@ -10,4 +10,4 @@ logs
 wandb
 specs
 checkpoints
-src/telescope/checkpoints
+src/qorix/checkpoints

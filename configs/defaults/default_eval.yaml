@@ -1,4 +1,4 @@
-# Telescope standalone eval — default configuration
+# Qorix standalone eval — default configuration
 # All fields with their defaults. Override in a run config via --config.
 #
 # Required fields (must be set in your run config):
@@ -33,7 +33,7 @@ max_tokens: 3700
 # ── Ray cluster ──────────────────────────────────────────────────────────────
 ray_address: "auto"
 ray_auto_start_local: true
-ray_namespace: "telescope-eval"
+ray_namespace: "qorix-eval"
 ray_log_to_driver: true
 ray_disable_runtime_env_hook: true
 ray_pin_py_executable: true

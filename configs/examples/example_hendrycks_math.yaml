@@ -3,7 +3,7 @@
 #
 # Usage: uv run train.py --config configs/examples/example_hendrycks_math.yaml
 
-wandb_project: "telescope"
+wandb_project: "qorix"
 wandb_run_name: "hendrycks_math"
 
 model: "Qwen/Qwen2.5-3B"

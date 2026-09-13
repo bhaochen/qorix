@@ -3,7 +3,7 @@
 #
 # Usage: uv run train.py --config configs/examples/example_countdown.yaml
 
-wandb_project: "telescope"
+wandb_project: "qorix"
 wandb_run_name: "countdown"
 
 model: "Qwen/Qwen2.5-3B"

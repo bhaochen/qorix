@@ -1,10 +1,10 @@
-# Telescope Base: heavy CUDA dependencies (APEX, Transformer Engine)
+# Qorix Base: heavy CUDA dependencies (APEX, Transformer Engine)
 #
 # This image is built RARELY — only when CUDA dependencies change.
 # Build it on a beefy machine (e.g. AWS) and push to GHCR:
 #
-#   docker build -f docker/Dockerfile.base -t ghcr.io/<owner>/telescope-base:latest .
-#   docker push ghcr.io/<owner>/telescope-base:latest
+#   docker build -f docker/Dockerfile.base -t ghcr.io/<owner>/qorix-base:latest .
+#   docker push ghcr.io/<owner>/qorix-base:latest
 #
 
 # ── Base: vLLM v0.17.0 (torch 2.10, CUDA 12.x, Python 3.12) ────────────────

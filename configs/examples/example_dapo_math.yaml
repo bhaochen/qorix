@@ -3,7 +3,7 @@
 #
 # Usage: uv run train.py --config configs/examples/example_dapo_math.yaml
 
-wandb_project: "telescope"
+wandb_project: "qorix"
 wandb_run_name: "dapo_math"
 
 model: "Qwen/Qwen2.5-3B"

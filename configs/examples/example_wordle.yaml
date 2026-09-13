@@ -4,7 +4,7 @@
 #
 # Usage: uv run train.py --config configs/examples/example_wordle.yaml
 
-wandb_project: "telescope"
+wandb_project: "qorix"
 wandb_run_name: "wordle"
 
 model: "Qwen/Qwen3-4B"

@@ -3344,7 +3344,7 @@ wheels = [
 ]
 
 [[package]]
-name = "telescope"
+name = "qorix"
 version = "0.1.2"
 source = { editable = "." }
 dependencies = [

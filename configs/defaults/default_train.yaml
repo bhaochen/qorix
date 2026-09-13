@@ -1,4 +1,4 @@
-# Telescope default configuration
+# Qorix default configuration
 # All fields with their defaults — serves as documentation.
 # Override per-experiment in a run.yaml passed via --config.
 # Override on CLI: --learning_rate 5e-7  or  --learning-rate 5e-7
@@ -14,7 +14,7 @@ mixed_precision_dtype: "bfloat16" # FSDP mixed precision, or null to disable
 # ── Ray cluster ──────────────────────────────────────────────────────────────
 ray_address: "auto"
 ray_auto_start_local: true
-ray_namespace: "telescope"
+ray_namespace: "qorix"
 ray_log_to_driver: true
 ray_runtime_env: null
 ray_disable_runtime_env_hook: true
@@ -159,9 +159,9 @@ checkpoint_keep_every: null # always keep checkpoints at these step multiples (e
 
 # ── Logging ──────────────────────────────────────────────────────────────────
 use_wandb: true
-wandb_project: "telescope"
-wandb_run_name: "telescope_run"
-wandb_tags: ["telescope"]
+wandb_project: "qorix"
+wandb_run_name: "qorix_run"
+wandb_tags: ["qorix"]
 wandb_upload_code: true
 wandb_upload_logs: true
 wandb_upload_logs_detailed: false

@@ -8,11 +8,11 @@ Usage::
 
 
 def main():
-    from telescope.eval_standalone.config_loader import parse_args_and_load
+    from qorix.eval_standalone.config_loader import parse_args_and_load
 
     eval_cfg = parse_args_and_load()
 
-    from telescope.eval_standalone.driver import run_eval
+    from qorix.eval_standalone.driver import run_eval
 
     run_eval(eval_cfg)
 
