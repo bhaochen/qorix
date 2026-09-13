@@ -39,3 +39,15 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             BASE_IMAGE=ghcr.io/eduardoslonski/telescope-base:latest
+
+      - name: Make GHCR package public
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pkg="ghcr.io/${{ github.repository_owner }}/qorix"
+          enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1], safe=""))' "$pkg")
+          if ! gh api --method PATCH -H "Accept: application/vnd.github+json" \
+            "/user/packages/container/$enc" -f visibility=public; then
+            gh api --method PATCH -H "Accept: application/vnd.github+json" \
+              "/user/packages/container/qorix" -f visibility=public
+          fi
