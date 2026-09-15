@@ -737,6 +737,14 @@ async def _run_eval_async(eval_cfg: EvalStandaloneConfig) -> None:
         )
     wb_entity, wb_project, wb_run_id = parts
     _log.info(f"Attaching to wandb run: {eval_cfg.wandb_run_path}")
+
+    # Auto-load wandb API key from ~/.qorix/wandb_key if not set in env
+    if "WANDB_API_KEY" not in os.environ:
+        qorix_key_file = Path.home() / ".qorix" / "wandb_key"
+        if qorix_key_file.exists():
+            _log.info("[WANDB] Loading API key from ~/.qorix/wandb_key")
+            os.environ["WANDB_API_KEY"] = qorix_key_file.read_text().strip()
+
     wandb_run = wandb.init(entity=wb_entity, project=wb_project, id=wb_run_id, resume="allow")
 
     # Parse eval configs and create EvalRunner

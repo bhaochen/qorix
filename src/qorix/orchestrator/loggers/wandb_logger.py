@@ -259,6 +259,13 @@ class WandbLogger:
         if not is_debug_mode():
             init_kwargs["settings"] = wandb.Settings(silent=True)
 
+        # Auto-load wandb API key from ~/.qorix/wandb_key if not set in env
+        if "WANDB_API_KEY" not in os.environ:
+            qorix_key_file = Path.home() / ".qorix" / "wandb_key"
+            if qorix_key_file.exists():
+                _log.info("[WANDB] Loading API key from ~/.qorix/wandb_key")
+                os.environ["WANDB_API_KEY"] = qorix_key_file.read_text().strip()
+
         self.run = wandb.init(**init_kwargs)
         try:
             self._upload_code_snapshot()
