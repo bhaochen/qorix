@@ -76,6 +76,12 @@ pip install qorix-ui
 qorix
 ```
 
+To update to the latest version:
+
+```bash
+uv pip install --upgrade qorix-ui
+```
+
 Opens the dashboard at `localhost:8005`, syncing data from your W&B runs. See [UI documentation](https://docs.qorix.training/visualization/installation).
 
 <p align="center">
